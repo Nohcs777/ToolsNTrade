@@ -42,7 +42,7 @@ namespace IO.Swagger.Models
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="CardId">CardId.</param>
+        /// <param name="CardId">asdfadfa.</param>
         /// <param name="Quantity">Quantity.</param>
         /// <param name="ShipDate">ShipDate.</param>
         /// <param name="Status">Order Status.</param>
@@ -73,8 +73,9 @@ namespace IO.Swagger.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets CardId
+        /// asdfadfa
         /// </summary>
+        /// <value>asdfadfa</value>
         [DataMember(Name="CardId")]
         public long? CardId { get; set; }
 
