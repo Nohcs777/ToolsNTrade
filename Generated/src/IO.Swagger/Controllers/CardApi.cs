@@ -76,7 +76,7 @@ namespace IO.Swagger.Controllers
         /// <summary>
         /// Finds Cards by status
         /// </summary>
-        /// <remarks>Multiple status values can be provided with comma separated strings</remarks>
+        /// <remarks>Multiple status values can be *Cards* provided with comma separated strings</remarks>
         /// <param name="status">Status values that need to be considered for filter</param>
         /// <response code="200">successful operation</response>
         /// <response code="400">Invalid status value</response>
