@@ -46,7 +46,7 @@ namespace IO.Swagger.Controllers
         /// </summary>
         
         /// <param name="body">Card object that is added to the store</param>
-        /// <response code="201">Card created andt hat needs to be commited added to the database.</response>
+        /// <response code="201">Card created andt hat needs to be commited added to the database</response>
         /// <response code="405">Invalid input</response>
         [HttpPost]
         [Route("/Cardstore/v1.1/Card")]
