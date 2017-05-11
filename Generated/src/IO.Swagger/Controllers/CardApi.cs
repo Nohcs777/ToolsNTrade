@@ -49,7 +49,7 @@ namespace IO.Swagger.Controllers
         /// <response code="201">Card created</response>
         /// <response code="405">Invalid input</response>
         [HttpPost]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card")]
+        [Route("/Cardstore/v1.1/Card")]
         [SwaggerOperation("AddCard")]
         [SwaggerResponse(200, type: typeof(Card))]
         public virtual IActionResult AddCard([FromBody]Card body)
@@ -72,7 +72,7 @@ namespace IO.Swagger.Controllers
         /// <response code="400">Invalid ID supplied</response>
         /// <response code="404">Card not found</response>
         [HttpDelete]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card/{CardId}")]
+        [Route("/Cardstore/v1.1/Card/{CardId}")]
         [SwaggerOperation("DeleteCard")]
         public virtual void DeleteCard([FromRoute]long? cardId, [FromHeader]string apiKey)
         { 
@@ -88,7 +88,7 @@ namespace IO.Swagger.Controllers
         /// <response code="200">successful operation</response>
         /// <response code="400">Invalid status value</response>
         [HttpGet]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card/findByStatus")]
+        [Route("/Cardstore/v1.1/Card/findByStatus")]
         [SwaggerOperation("FindCardsByStatus")]
         [SwaggerResponse(200, type: typeof(List<Card>))]
         public virtual IActionResult FindCardsByStatus([FromQuery]List<string> status)
@@ -110,7 +110,7 @@ namespace IO.Swagger.Controllers
         /// <response code="200">successful operation</response>
         /// <response code="400">Invalid tag value</response>
         [HttpGet]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card/findByTags")]
+        [Route("/Cardstore/v1.1/Card/findByTags")]
         [SwaggerOperation("FindCardsByTags")]
         [SwaggerResponse(200, type: typeof(List<Card>))]
         public virtual IActionResult FindCardsByTags([FromQuery]List<string> tags)
@@ -133,7 +133,7 @@ namespace IO.Swagger.Controllers
         /// <response code="400">Invalid ID supplied</response>
         /// <response code="404">Card not found</response>
         [HttpGet]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card/{CardId}")]
+        [Route("/Cardstore/v1.1/Card/{CardId}")]
         [SwaggerOperation("GetCardById")]
         [SwaggerResponse(200, type: typeof(Card))]
         public virtual IActionResult GetCardById([FromRoute]long? cardId)
@@ -156,7 +156,7 @@ namespace IO.Swagger.Controllers
         /// <response code="404">Card not found</response>
         /// <response code="405">Validation exception</response>
         [HttpPut]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card")]
+        [Route("/Cardstore/v1.1/Card")]
         [SwaggerOperation("UpdateCard")]
         public virtual void UpdateCard([FromBody]Card body)
         { 
@@ -173,7 +173,7 @@ namespace IO.Swagger.Controllers
         /// <param name="status">Updated status of the Card</param>
         /// <response code="405">Invalid input</response>
         [HttpPost]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card/{CardId}")]
+        [Route("/Cardstore/v1.1/Card/{CardId}")]
         [SwaggerOperation("UpdateCardWithForm")]
         public virtual void UpdateCardWithForm([FromRoute]long? cardId, [FromForm]string name, [FromForm]string status)
         { 
@@ -190,7 +190,7 @@ namespace IO.Swagger.Controllers
         /// <param name="file">file to upload</param>
         /// <response code="200">successful operation</response>
         [HttpPost]
-        [Route("/ToolsNTrade/Cardstore/1.0.0/Card/{CardId}/uploadImage")]
+        [Route("/Cardstore/v1.1/Card/{CardId}/uploadImage")]
         [SwaggerOperation("UploadFile")]
         [SwaggerResponse(200, type: typeof(ApiResponse))]
         public virtual IActionResult UploadFile([FromRoute]long? cardId, [FromForm]string additionalMetadata, [FromForm]System.IO.Stream file)
