@@ -46,13 +46,20 @@ namespace IO.Swagger.Controllers
         /// </summary>
         
         /// <param name="body">Card object that needs to be added to the store</param>
+        /// <response code="201">Card created</response>
         /// <response code="405">Invalid input</response>
         [HttpPost]
         [Route("/ToolsNTrade/Cardstore/1.0.0/Card")]
         [SwaggerOperation("AddCard")]
-        public virtual void AddCard([FromBody]Card body)
+        [SwaggerResponse(200, type: typeof(Card))]
+        public virtual IActionResult AddCard([FromBody]Card body)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Card>(exampleJson)
+            : default(Card);
+            return new ObjectResult(example);
         }
 
 
