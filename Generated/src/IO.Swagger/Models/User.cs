@@ -1,5 +1,5 @@
 /*
- * TNT Cardstore
+ * Cardstore v1.1
  *
  * This is a sample server Cardstore service.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/). 
  *
