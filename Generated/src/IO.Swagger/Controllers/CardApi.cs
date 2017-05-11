@@ -45,7 +45,7 @@ namespace IO.Swagger.Controllers
         /// Add a new Card to the store
         /// </summary>
         
-        /// <param name="body">Card object that needs to be added to the store</param>
+        /// <param name="body">Card object that needs to be &lt;b&gt;commited&lt;/b&gt; added to the store</param>
         /// <response code="201">Card created and to the database.</response>
         /// <response code="405">Invalid input</response>
         [HttpPost]
